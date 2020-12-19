@@ -1,0 +1,36 @@
+<p>push-and-splice-dynamic2 works!</p>
+
+
+<h2 style="color: green;">ID Method</h2>
+<div class="container">
+    <div class="row">
+        <div class="form-group" style="margin-left: 15px;">
+            <input type="text" class="form-control" #user placeholder="Enter Username">
+            <button type="submit" class="btn btn-primary" (click)="getData(user)" style="margin-top: 5px;">Create User</button>
+            <!-- <button type="submit" class="btn btn-danger" (click)="deleteData()" style="margin-top: 5px; margin-left: 5px;">Delete User</button> -->
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <table class="table">
+                <thead class="bg-primary text-white">
+                    <tr>
+                        <td>ID</td>
+                        <td>User Name</td>
+                        <td>Remove</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of username; let i=index">
+                        <td>{{i+1}}</td>
+                        <td>{{item.name}}</td>
+                        <!-- index number is added in click event to get item id -->
+                        <td><button type="submit" class="btn btn-danger" (click)="deleteUser(i)" >Remove</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

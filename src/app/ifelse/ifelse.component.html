@@ -1,0 +1,36 @@
+<p>ifelse works!</p>
+
+
+                                <!-- method 1 -->
+<h1 *ngIf="condition==true; else elsecondi">
+    condition True
+</h1>
+
+<!-- ng-template is used for else condtion and else part is hidden from main HTML page until it is false -->
+
+<ng-template #elsecondi>
+    <h1>
+        condition false
+    </h1>
+</ng-template>
+
+
+
+                                <!-- method-2 -->
+<!-- other method with property binding and ngtemplate -->
+<!-- <ng-template [ngif]='condition' [ngifelse]='elsecondition'>
+    <h1 style="color: aqua;">Condition True</h1>
+</ng-template>
+<ng-template #elsecondition>
+    <h1 style="color: aqua;">condition False</h1>
+</ng-template> -->
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,56 @@
+<p>switchcase works!</p>
+
+
+<!-- method-1 -->
+
+<!-- <span [ngSwitch]="color">
+<p *ngSwitchCase="'black'">
+    black   
+</p>
+<p *ngSwitchCase="'white'">
+    white
+</p>
+<p *ngSwitchCase="'blue'">
+    white
+</p>
+<p *ngSwitchCase="'red'">
+    white
+</p>
+<p *ngSwitchDefault>
+    Other Color
+</p>
+</span> -->
+
+
+
+
+
+
+
+
+
+
+<!-- method-2 -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+                <select class="form-control" (change)="getValue($event)">
+                    <option value="No Option Selected"> Default Option</option>
+                    <option value="laptop">Laptop</option>
+                    <option value="bcaa">BCAA</option>
+                    <option value="cretin">Cretin</option>
+                    <option value="steroids">Steroids</option>
+                </select>
+        </div>
+        <div class="col-sm-4">
+            <div [ngSwitch]="data">
+                <h1 *ngSwitchDefault="'No Option Selected'"> Default Option</h1>
+                <h1 *ngSwitchCase="'laptop'"> Laptop</h1>
+                <h1 *ngSwitchCase="'bcaa'"> Bcaa</h1>
+                <h1 *ngSwitchCase="'cretin'"> Cretin</h1>
+                <h1 *ngSwitchCase="'steroids'"> steroids</h1>
+            </div>
+        </div>
+    </div>
+</div>
